@@ -1,0 +1,6 @@
+mcp[cli]
+fastapi
+uvicorn
+httpx
+pydantic
+sqlite3
