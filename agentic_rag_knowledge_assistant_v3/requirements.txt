@@ -1,0 +1,33 @@
+# python3.12  
+# 必须要升级系统的 pip，Python 3.12 移除了旧版的 setuptools。在安装上述复杂的包之前，请务必先执行以下命令，否则 faiss-cpu 或 ragas 在编译轮子（Wheels）时可能会直接报错
+# python -m pip install --upgrade pip setuptools wheel
+# 清理旧缓存安装
+# pip install -r requirements.txt --no-cache-dir
+
+# 核心大模型框架（保持高版本线，完美支持 Python 3.12） 
+langchain==0.3.14
+langchain-core==0.3.47
+langchain-openai==0.3.0
+langchain-ollama==0.3.0
+langgraph==0.5.4  # langgraph>=0.2.34
+langchain-milvus>=0.1.0
+
+# 评估与数据处理
+ragas==0.2.11
+datasets==2.20.0
+pandas==2.2.2
+
+# 向量检索与基础依赖
+requests==2.32.3
+pymilvus<2.6.0
+httpx>=0.24.0
+
+# 【核心修复点】放开 2.8.2 限制，允许升级至 2.9+ 以兼容官方 ollama 客户端 
+pydantic==2.13.4  # >=2.9.0,<3.0.0
+
+安装与你的服务端（8.11.3）完美契合的 8.x 最新稳定版客户端
+elasticsearch>=8.0.0,<9.0.0
+
+# 🆕 追加用于解析本地多源复杂文档的库
+langchain-community>=0.0.30
+markdown>=3.6

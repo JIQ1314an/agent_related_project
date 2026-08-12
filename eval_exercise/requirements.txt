@@ -1,0 +1,21 @@
+# 1. RAG 离线评估与数据处理 (Ragas)
+ragas==0.4.3
+langchain-openai
+openai
+datasets
+python-dotenv
+httpx
+openpyxl
+
+# 2. LLM / Embedding 适配层 (支持 OpenAI / Qwen / DeepSeek)
+langchain-openai
+langchain-community
+python-dotenv
+
+# 3. 客服与应用单元断言测试 (DeepEval)
+deepeval
+pytest
+
+# 4. Agent 综合能力与工具调用评估 (SWE-bench & Inspect AI)
+swebench
+inspect_ai
