@@ -44,6 +44,8 @@ Thumbs.db
 .vscode/
 
 # ---- 本项目特有 ----
+# 本地配置文件（含运行环境相关设置，避免误提交；以 .env.example 为模板）
+config.py
 # 临时数据目录
 tmp_data/
 # 自动生成的评测报告（可由评测脚本重新生成；知识库文档与评测集 data/*.md、data/eval_dataset.json 保留）

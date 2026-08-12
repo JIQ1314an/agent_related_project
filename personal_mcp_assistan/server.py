@@ -56,7 +56,7 @@ async def search_news(query: str) -> str:
     通过关键字搜索最新的全球新闻（使用 NewsAPI 免费接口）。
     """
     api_key = config.news_api_key
-    if api_key.strip() == "":
+    if not api_key or api_key.strip() == "":
         return "⚠️ 请先在 server.py 中配置您的 NewsAPI 密钥。"
 
     url = f"https://newsapi.org/v2/everything?q={query}&pageSize=3&apiKey={api_key}"
